@@ -1,0 +1,6 @@
+/examples/*
+/data/*
+/pretrained/*
+model.*
+
+__pycache__

@@ -1,0 +1,407 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Mar 31 22:30:25 2022
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+SYSTEMDRIVE = C:
+# environment
+LC_ALL = C
+# environment
+VBOX_HWVIRTEX_IGNORE_SVM_IN_USE = 1
+# environment
+USERPROFILE = C:\Users\bramb
+# environment
+LOCALAPPDATA = C:\Users\bramb\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0446cdab-a9b3-4409-9eb8-f724694dd288-sock
+# environment
+VSCODE_CWD = C:\Users\bramb\AppData\Local\Programs\Microsoft VS Code
+# makefile (from 'makefile', line 1)
+PYTHON = py -3.9
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 23
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# environment
+GOPATH = C:\Users\bramb\Documents\Codes\Go
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_12672_QQKJFMPQIHCVXXLJ
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\bramb\AppData\Roaming\Code\CachedData\e18005f0f1b33c29e81d732535d8c0e47cafb0b5
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\bramb\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\bramb\OneDrive
+# makefile (from 'makefile', line 5)
+PIPELINE_CONFIG = configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
+# makefile
+CURDIR := c:/Users/bramb/Documents/Codes/MachineLearning/measure-detection
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# makefile (from 'makefile', line 6)
+INIT = $(OBJECT_DETECTION_LIB) $(PIPELINE_CONFIG)
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# makefile (from 'makefile', line 8)
+TRAIN_DIR = data/train
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# environment
+P2 = D:\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\protoc-3.17.3-win64\bin;C:\Program Files\NVIDIA\CUDNN\v8.3\bin;D:\zlib123dllx64\dll_x64;
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 12672
+# makefile (from 'makefile', line 3)
+OBJECT_DETECTION_LIB = models/research/object_detection
+# environment
+CUDA_PATH = D:\NVIDIA GPU Computing Toolkit\CUDA\v11.6
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\bramb\OneDrive
+# default
+MAKE_HOST := Windows32
+# environment
+ANDROID_HOME = C:\Users\bramb\AppData\Local\Android\Sdk
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := sh.exe
+# environment
+HOMEPATH = \Users\bramb
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# makefile (from 'makefile', line 11)
+TFLITE_MODEL = model.tflite
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = C:\Program Files\GitHub CLI\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Users\bramb\bin;C:\Program Files\wget\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\Program Files\handle64;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\curl-7.74.0_2\bin\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Alacritty\;C:\Users\bramb\AppData\Local\Pub\Cache\bin;D:\Programs\mingw\mingw64\bin;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\libxml2-x86_64\bin;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.275-1\bin;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\extras\CUPTI\lib64;C:\Program Files (x86)\Intel\iCLS Client\;C:\WINDOWS\System32\OpenSSH\;C:\Windows;C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.275-1\jre\bin;D:\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\GitHub CLI\;C:\Program Files\Alacritty\;D:\libxml2-x86_64\bin;D:\Go\bin;C:\Program Files\Git\cmd;;D:\ffmpeg\bin;C:\Program Files (x86)\chromedriver;C:\Program Files\Intel\iCLS Client\;C:\Python39\;C:\Users\bramb\AppData\Local\Programs\Python\Python39\Scripts;C:\sqlite\;C:\Program Files (x86)\Google\Chrome\Application;D:\Go\bin;C:\Python39\Scripts\;D:\Eclipse Adoptium\jdk-17.0.1.12-hotspot\bin;D:\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\koid\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Cloc\;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\Wbem;D:\gnuplot\bin;D:\NVIDIA GPU Computing Toolkit\CUDA\v11.6\libnvvp;D:\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\Hostx64\x64;C:\WINDOWS;C:\TDM-GCC-64\bin;D:\Programs\mingw\mingw64\x86_64-w64-mingw32\bin;C:\Program Files\Microsoft Network Monitor 3\;C:\Windows\System32;C:\Users\bramb\Documents\Codes\Go\bin;D:\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\protoc-3.17.3-win64\bin;C:\Program Files\NVIDIA\CUDNN\v8.3\bin;D:\zlib123dllx64\dll_x64;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\bin\\..\extras\CUPTI\lib64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\libnvvp;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\GnuPG\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\TDM-GCC-64\bin;C:\WINDOWS\system32;C;C:\Users\bramb\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bramb\AppData\Roaming\npm;C:\Users\bramb\go\bin
+# environment
+COMPUTERNAME = DESKTOP-E7L9LC1
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# makefile (from 'makefile', line 9)
+PB_DIR = data/output_pb
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132377472039249210
+# environment
+NVTOOLSEXT_PATH = C:\Program Files\NVIDIA Corporation\NvToolsExt\
+# environment
+LOGONSERVER = \\DESKTOP-E7L9LC1
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = bramb
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+PLATFORM-TOOLS = C:\Users\bramb\AppData\Local\Android\Sdk\platform-tools\
+# environment
+USERDOMAIN = DESKTOP-E7L9LC1
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# environment
+CUDA_PATH_V11_6 = D:\NVIDIA GPU Computing Toolkit\CUDA\v11.6
+# makefile
+.DEFAULT_GOAL := test
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-E7L9LC1
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+PUBLIC = C:\Users\Public
+# environment
+APPDATA = C:\Users\bramb\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# makefile (from 'makefile', line 10)
+TFLITE_DIR = data/output_tflite
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\bramb\AppData\Local\Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\c6f36c2d26c8f4e05244d334cd263e8d-1.66.0-main-sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'makefile', line 4)
+DATASET_DIRECTORY = d:/datasets/AudioLabs_v2
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 7100
+# environment
+PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+# variable set hash-table stats:
+# Load=114/1024=11%, Rehash=0, Collisions=12/167=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key c:/Users/bramb/Documents/Codes/MachineLearning/measure-detection, mtime 1648789802): 20 files, no impossibilities.
+
+# 20 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+prepare-dataset: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 17):
+	$(PYTHON) create_tf_records.py \
+		--label_map_path="mapping.pbtxt" \
+		--included_classes="system_measures" \
+		--image_directory="$(DATASET_DIRECTORY)/dataset" \
+		--annotation_directory="$(DATASET_DIRECTORY)/dataset" \
+		--output_path_training_split="$(DATASET_DIRECTORY)/all/training.record" \
+		--output_path_validation_split="$(DATASET_DIRECTORY)/all/validation.record" \
+		--output_path_test_split="$(DATASET_DIRECTORY)/all/test.record"
+
+train: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 27):
+	$(PYTHON) $(OBJECT_DETECTION_LIB)/model_main_tf2.py \
+		--pipeline_config_path="$(PIPELINE_CONFIG)" \
+		--model_dir="$(TRAIN_DIR)" \
+		--alsologtostderr
+
+# Not a target:
+models/research/object_detection:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+evaluate: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config data/train
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 33):
+	$(PYTHON) $(OBJECT_DETECTION_LIB)/model_main_tf2.py \
+		--pipeline_config_path="$(PIPELINE_CONFIG)" \
+		--model_dir="$(TRAIN_DIR)" \
+		--checkpoint_dir="$(TRAIN_DIR)" \
+		--alsologtostderr
+
+# Not a target:
+data/train:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+inference-tflite: model.tflite
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 58):
+	$(PYTHON) tflite_inference.py $(TFLITE_MODEL)
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+data/output_pb:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+inference-pb: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config data/output_pb
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 55):
+	$(PYTHON) pb_inference.py $(PB_DIR)/saved_model
+
+freeze-pb: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config data/train
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 40):
+	$(PYTHON) $(OBJECT_DETECTION_LIB)/exporter_main_v2.py \
+		--input_type=image_tensor \
+		--pipeline_config_path="$(PIPELINE_CONFIG)" \
+		--trained_checkpoint_dir="$(TRAIN_DIR)" \
+		--output_directory="$(PB_DIR)"
+	# cp $(PB_DIR)/saved_model/saved_model.pb ./model.pb
+
+test: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 14):
+	$(PYTHON) $(OBJECT_DETECTION_LIB)/builders/model_builder_test.py
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-31 17:28:59
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+model.tflite:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+freeze-tflite: models/research/object_detection configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config data/train
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 48):
+	$(PYTHON) $(OBJECT_DETECTION_LIB)/export_tflite_graph_tf2.py \
+		--pipeline_config_path="$(PIPELINE_CONFIG)" \
+		--trained_checkpoint_dir="$(TRAIN_DIR)" \
+		--output_directory="$(TFLITE_DIR)"
+	$(PYTHON) tflite_convert.py $(TFLITE_DIR)/saved_model
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=0/46=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 35 / storage = 447 B / avg = 12 B
+# current buf: size = 8174 B / used = 447 B / count = 35 / avg = 12 B
+
+# strcache performance: lookups = 62 / hit rate = 43%
+# hash-table stats:
+# Load=35/8192=0%, Rehash=0, Collisions=0/62=0%
+# Finished Make data base on Thu Mar 31 22:30:25 2022
+
+ 

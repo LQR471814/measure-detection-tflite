@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/bramb/Documents/Codes/MachineLearning/measure-detection'
+py -3.9 models/research/object_detection/builders/model_builder_test.py
+make: Leaving directory 'c:/Users/bramb/Documents/Codes/MachineLearning/measure-detection'
+ 
