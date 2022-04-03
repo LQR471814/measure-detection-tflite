@@ -1,7 +1,7 @@
 PYTHON = py -3.9
 
 OBJECT_DETECTION_LIB = models/research/object_detection
-DATASET_DIRECTORY = d:/datasets/AudioLabs_v2
+DATASET_DIR = d:/datasets/AudioLabs_v2
 PIPELINE_CONFIG = configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
 INIT = $(OBJECT_DETECTION_LIB) $(PIPELINE_CONFIG)
 
@@ -14,14 +14,15 @@ test: $(INIT)
 	$(PYTHON) $(OBJECT_DETECTION_LIB)/builders/model_builder_test.py
 
 prepare-dataset: $(INIT)
+	$(PYTHON) prepare_dataset.py $(DATASET_DIR)
 	$(PYTHON) create_tf_records.py \
 		--label_map_path="mapping.pbtxt" \
 		--included_classes="system_measures" \
-		--image_directory="$(DATASET_DIRECTORY)/dataset" \
-		--annotation_directory="$(DATASET_DIRECTORY)/dataset" \
-		--output_path_training_split="$(DATASET_DIRECTORY)/all/training.record" \
-		--output_path_validation_split="$(DATASET_DIRECTORY)/all/validation.record" \
-		--output_path_test_split="$(DATASET_DIRECTORY)/all/test.record"
+		--image_directory="$(DATASET_DIR)/dataset" \
+		--annotation_directory="$(DATASET_DIR)/dataset" \
+		--output_path_training_split="$(DATASET_DIR)/all/training.record" \
+		--output_path_validation_split="$(DATASET_DIR)/all/validation.record" \
+		--output_path_test_split="$(DATASET_DIR)/all/test.record"
 
 train: $(INIT)
 	$(PYTHON) $(OBJECT_DETECTION_LIB)/model_main_tf2.py \
