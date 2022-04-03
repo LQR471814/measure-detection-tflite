@@ -23,17 +23,17 @@ if __name__ == '__main__':
     train_reader = train_input.tf_record_input_reader
     eval_reader = eval_input.tf_record_input_reader
 
-    train_reader.input_path[0] = os.path.join(
+    train_reader.input_path[0] = os.path.normpath(os.path.join(
         args.dataset_directory, os.path.basename(
             train_reader.input_path[0]
         )
-    )
+    ))
 
-    eval_reader.input_path[0] = os.path.join(
+    eval_reader.input_path[0] = os.path.normpath(os.path.join(
         args.dataset_directory, os.path.basename(
             eval_reader.input_path[0]
         )
-    )
+    ))
 
     train_input.label_map_path = args.mapping
     eval_input.label_map_path = args.mapping
