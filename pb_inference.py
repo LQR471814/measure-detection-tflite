@@ -8,9 +8,12 @@ from inference_lib import inference, Runner
 
 def runner(func: tf.function) -> Runner:
     def wrapped(image: np.array):
-        result = func(input_tensor=image.astype(np.uint8))
-        print(result)
-        return result['detection_boxes'][0]
+        results = []
+        output = func(input_tensor=image)
+        for i, r in enumerate(output['detection_boxes'][0]):
+            if output['detection_scores'][0][i] > 0.6:
+                results.append(r)
+        return results
     return wrapped
 
 

@@ -47,8 +47,11 @@ freeze-tflite: $(INIT) $(TRAIN_DIR)
 	$(PYTHON) $(OBJECT_DETECTION_LIB)/export_tflite_graph_tf2.py \
 		--pipeline_config_path="$(PIPELINE_CONFIG)" \
 		--trained_checkpoint_dir="$(TRAIN_DIR)" \
-		--output_directory="$(TFLITE_DIR)"
-	$(PYTHON) tflite_convert.py $(TFLITE_DIR)/saved_model
+		--output_directory="$(TFLITE_DIR)" \
+		--max_detections 100
+	tflite_convert \
+		--saved_model_dir="$(TFLITE_DIR)/saved_model" \
+		--output_file="$(TFLITE_MODEL)"
 
 inference-pb: $(INIT) $(PB_DIR)
 	$(PYTHON) pb_inference.py $(PB_DIR)/saved_model

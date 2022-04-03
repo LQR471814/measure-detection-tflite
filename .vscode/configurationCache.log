@@ -1,1 +1,0 @@
-{"buildTargets":["evaluate","freeze-pb","freeze-tflite","inference-pb","inference-tflite","prepare-dataset","test","train"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
