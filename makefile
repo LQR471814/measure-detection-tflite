@@ -23,6 +23,10 @@ prepare-dataset: $(INIT)
 		--output_path_training_split="$(DATASET_DIR)/all/training.record" \
 		--output_path_validation_split="$(DATASET_DIR)/all/validation.record" \
 		--output_path_test_split="$(DATASET_DIR)/all/test.record"
+	$(PYTHON) modify_config.py \
+		--pipeline_config="$(PIPELINE_CONFIG)" \
+		--dataset_directory="$(DATASET_DIR)" \
+		--mapping="mapping.pbtxt"
 
 train: $(INIT)
 	$(PYTHON) $(OBJECT_DETECTION_LIB)/model_main_tf2.py \

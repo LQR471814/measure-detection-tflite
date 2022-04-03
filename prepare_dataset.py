@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import shutil
+from google.protobuf import text_format
 
 from PIL import Image
 
