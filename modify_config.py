@@ -23,11 +23,11 @@ if __name__ == '__main__':
     train_reader = train_input.tf_record_input_reader
     eval_reader = eval_input.tf_record_input_reader
 
-    train_reader.input_path[0] = os.path.join(
-        args.dataset_directory, "training.record-?????-of-00004")
+    train_reader.input_path[0] = os.path.normpath(os.path.join(
+        args.dataset_directory, "training.record-?????-of-00004"))
 
-    eval_reader.input_path[0] = os.path.join(
-        args.dataset_directory, "validation.record-?????-of-00004")
+    eval_reader.input_path[0] = os.path.normpath(os.path.join(
+        args.dataset_directory, "validation.record-?????-of-00004"))
 
     train_input.label_map_path = args.mapping
     eval_input.label_map_path = args.mapping
