@@ -1,14 +1,14 @@
-PYTHON = py -3.9
+PYTHON ?= py -3.9
 
-OBJECT_DETECTION_LIB = models/research/object_detection
-DATASET_DIR = d:/datasets/AudioLabs_v2
-PIPELINE_CONFIG = configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
+OBJECT_DETECTION_LIB ?= models/research/object_detection
+DATASET_DIR ?= d:/datasets/AudioLabs_v2
+PIPELINE_CONFIG ?= configs/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.config
 INIT = $(OBJECT_DETECTION_LIB) $(PIPELINE_CONFIG)
 
-TRAIN_DIR = data/train
-PB_DIR = data/output_pb
-TFLITE_DIR = data/output_tflite
-TFLITE_MODEL = model.tflite
+TRAIN_DIR ?= data/train
+PB_DIR ?= data/output_pb
+TFLITE_DIR ?= data/output_tflite
+TFLITE_MODEL ?= model.tflite
 
 test: $(INIT)
 	$(PYTHON) $(OBJECT_DETECTION_LIB)/builders/model_builder_test.py
