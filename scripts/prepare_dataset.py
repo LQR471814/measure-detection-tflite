@@ -8,15 +8,22 @@ from typing import Callable
 from PIL import Image
 
 
+def replace_extension(name: str, extension: str) -> str:
+    return '.'.join(name.split('.')[:-1]) + f'.{extension}'
+
+
 def scale_annotation(sf: float, path: str, callback: Callable[[list], None]) -> list[list]:
     with open(path, "r") as f:
         parsed = json.loads(f.read())
         for measure in parsed['system_measures']:
+            left = measure['left'] * sf
+            top = measure['top'] * sf
+            right = (measure['left'] + measure['width']) * sf
+            bottom = (measure['top'] + measure['height']) * sf
+
             callback([
-                measure['left'] * sf, measure['top'] * sf, None, None,
-                (measure['left'] + measure['width']) * sf,
-                (measure['top'] + measure['height']) * sf,
-                None, None
+                left, top, right, top,
+                right, bottom, left, bottom,
             ])
 
 
@@ -40,9 +47,11 @@ if __name__ == '__main__':
         if f not in filename_blacklist:
             total_items += len(os.listdir(path=os.path.join(root, f, "img")))
     validate_threshold = total_items * 0.8
+    test_threshold = total_items * 0.9
 
     writer = csv.writer(
-        open(os.path.join(target, "annotations.csv"), "w"),
+        open(os.path.join(target, "annotations.csv"),
+             "w", newline='', encoding='utf-8'),
         quoting=csv.QUOTE_MINIMAL
     )
     written = 0
@@ -57,16 +66,20 @@ if __name__ == '__main__':
 
         for image in os.listdir(path=images):
             annotation_path = os.path.join(
-                annotations, image.split('.')[0] + ".json")
-
-            def append_data(a):
-                writer.writerow([
-                    "TRAIN" if written < validate_threshold else "VALIDATION",
-                    os.path.join(target, image), *a
-                ])
+                annotations, replace_extension(image, "json"))
 
             i = Image.open(os.path.join(images, image))
             i.load()
+
+            image = replace_extension(image, "jpg")
+
+            def append_data(a):
+                writer.writerow([
+                    "TEST" if written >= test_threshold else
+                    "VALIDATION" if written >= validate_threshold else
+                    "TRAIN",
+                    os.path.join(target, image), *a
+                ])
 
             if i.width < 600:
                 sf = 600 / i.width
