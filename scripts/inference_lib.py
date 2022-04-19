@@ -18,9 +18,9 @@ def inference(
     for f in glob("examples/example_?.*"):
         example = Image.open(f).convert("RGB")
         example.load()
-        # example_resized = example.resize((width, height), resample=Image.LINEAR)
-        example = example.resize((width, height), resample=Image.LINEAR)
-        example_np = np.expand_dims(np.array(example, dtype=np.uint8), 0)
+        example_resized = example.resize((width, height), resample=Image.LINEAR)
+        # example = example.resize((width, height), resample=Image.LINEAR)
+        example_np = np.expand_dims(np.array(example_resized, dtype=np.uint8), 0)
 
         output = runner(example_np)
         boxes: BoxList = []

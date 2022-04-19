@@ -9,20 +9,18 @@ from inference_lib import inference, Runner
 def runner(func: tf.function) -> Runner:
     def wrapped(image: np.array):
         image = tf.convert_to_tensor(image, dtype=tf.uint8)
-        image = tf.image.convert_image_dtype(
-            image, dtype=tf.float32, saturate=False)
 
         results = []
-        output = func(input=image)
+        output = func(images=image)
 
-        for i, r in enumerate(output['output_3'][0]):
-            print(output['output_1'][0][i], end=" ")
-            if output['output_1'][0][i] > 0.6:
+        boxes = output['output_3'][0]
+        scores = output['output_1'][0]
+
+        for i, r in enumerate(boxes):
+            if scores[i] > 0.4:
                 results.append(r)
-        print("")
 
         return results
-
     return wrapped
 
 

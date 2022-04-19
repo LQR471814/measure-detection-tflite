@@ -1,9 +1,7 @@
 import argparse
 
-import numpy as np
 import tensorflow as tf
 from tflite_model_maker import model_spec, object_detector
-from tflite_model_maker.config import ExportFormat, QuantizationConfig
 
 assert tf.__version__.startswith('2')
 tf.get_logger().setLevel('ERROR')
@@ -17,7 +15,7 @@ if __name__ == '__main__':
     args = app.parse_args()
 
     spec = model_spec.get('efficientdet_lite0')
-    spec.config.tflite_max_detections = 50
+    spec.config.tflite_max_detections = 60
     spec.config.model_dir = args.model_dir
 
     train_data, validation_data, test_data = object_detector.DataLoader.from_csv(args.dataset)
@@ -26,11 +24,13 @@ if __name__ == '__main__':
         train_data,
         validation_data=validation_data,
         model_spec=spec,
-        epochs=1,
-        batch_size=1,
+        epochs=50,
+        batch_size=4,
         train_whole_model=True,
     )
-    model.evaluate(test_data)
+    print("training complete")
+    #? this uses an egregious amount of memory so it's not being executed
+    # model.evaluate(test_data)
 
     model.export(export_dir='.')
-    model.evaluate_tflite('model.tflite', test_data)
+    # model.evaluate_tflite('model.tflite', test_data)

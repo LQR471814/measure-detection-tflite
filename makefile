@@ -7,8 +7,9 @@ setup:
 	$(PYTHON) -m pip install -q --use-deprecated=legacy-resolver tflite-model-maker
 	$(PYTHON) -m pip install -q pycocotools
 
-prepare-dataset:
-	$(PYTHON) scripts/prepare_dataset.py $(DATASET_DIR)
+dataset:
+	$(PYTHON) scripts/prepare_dataset.py $(DATASET_DIR) \
+		--ratio=3
 
 model: $(DATASET_DIR)/dataset/annotations.csv
 	$(PYTHON) main.py \
@@ -16,5 +17,4 @@ model: $(DATASET_DIR)/dataset/annotations.csv
 		--model_dir="$(MODEL_DIR)"
 
 inference:
-	$(PYTHON) scripts/tflite_inference.py \
-		--tflite="model.tflite"
+	$(PYTHON) scripts/tflite_inference.py "model.tflite"

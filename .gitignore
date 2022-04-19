@@ -1,2 +1,6 @@
+__pycache__
 .vscode
-training_data
+
+/examples
+/training_data
+*.tflite

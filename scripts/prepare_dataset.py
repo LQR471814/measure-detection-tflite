@@ -21,10 +21,7 @@ def scale_annotation(sf: float, path: str, callback: Callable[[list], None]) -> 
             right = (measure['left'] + measure['width']) * sf
             bottom = (measure['top'] + measure['height']) * sf
 
-            callback([
-                left, top, right, top,
-                right, bottom, left, bottom,
-            ])
+            callback([left, top, right, bottom])
 
 
 filename_blacklist = ["coco", "dataset", "all"]
@@ -32,6 +29,7 @@ filename_blacklist = ["coco", "dataset", "all"]
 if __name__ == '__main__':
     app = argparse.ArgumentParser()
     app.add_argument("root")
+    app.add_argument("--ratio", type=int, default=1)
     args = app.parse_args()
 
     root = os.path.normpath(args.root)
@@ -46,6 +44,7 @@ if __name__ == '__main__':
     for f in filenames:
         if f not in filename_blacklist:
             total_items += len(os.listdir(path=os.path.join(root, f, "img")))
+    total_items = total_items / args.ratio
     validate_threshold = total_items * 0.8
     test_threshold = total_items * 0.9
 
@@ -64,7 +63,10 @@ if __name__ == '__main__':
         images = os.path.join(piece_root, "img")
         annotations = os.path.join(piece_root, "json")
 
-        for image in os.listdir(path=images):
+        for index, image in enumerate(os.listdir(path=images)):
+            if not index % args.ratio == 0:
+                continue
+
             annotation_path = os.path.join(
                 annotations, replace_extension(image, "json"))
 
@@ -78,17 +80,24 @@ if __name__ == '__main__':
                     "TEST" if written >= test_threshold else
                     "VALIDATION" if written >= validate_threshold else
                     "TRAIN",
-                    os.path.join(target, image), *a
+                    os.path.join(target, image),
+                    "measure",
+                    a[0] / i.width,
+                    a[1] / i.height,
+                    None, None,
+                    a[2] / i.width,
+                    a[3] / i.height,
+                    None, None
                 ])
 
-            if i.width < 600:
-                sf = 600 / i.width
-                i = i.resize((600, round(i.height * sf)),
+            if i.width > 1024:
+                sf = 1024 / i.width
+                i = i.resize((1024, round(i.height * sf)),
                              resample=Image.BILINEAR)
                 scale_annotation(sf, annotation_path, append_data)
-            elif i.height < 600:
-                sf = 600 / i.height
-                i = i.resize((round(i.width * sf), 600),
+            elif i.height > 1024:
+                sf = 1024 / i.height
+                i = i.resize((round(i.width * sf), 1024),
                              resample=Image.BILINEAR)
                 scale_annotation(sf, annotation_path, append_data)
             else:
