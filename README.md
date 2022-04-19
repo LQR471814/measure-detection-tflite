@@ -35,3 +35,5 @@ and verify the results with
 ```
 make inference
 ```
+
+for an example of such setup, see this example [colab](https://colab.research.google.com/drive/1X_vYLGetWLvMrzhWNM42gEb-aXtAueQq?authuser=1#scrollTo=XbzgTMF1jxr5)
