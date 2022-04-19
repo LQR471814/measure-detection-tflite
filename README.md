@@ -1,10 +1,9 @@
 ## measure-detection
 
-***A measure detection model for typeset scores, based on the TFLite Model Maker***
+***A measure detection model for typeset scores, based on the TFLite Model Maker. Inspired by the more general [MeasureDetector](https://github.com/OMR-Research/MeasureDetector) for handwritten and typeset scores.***
 
-This repository uses the `AudioLabs_v2` you can get it [here](https://github.com/apacha/OMR-Datasets/releases/download/datasets/AudioLabs_v2.zip)
+This repository uses the `AudioLabs_v2` dataset you can get it [here](https://github.com/apacha/OMR-Datasets/releases/download/datasets/AudioLabs_v2.zip)
 
-This repository was inspired by the more general [MeasureDetector](https://github.com/OMR-Research/MeasureDetector) for handwritten and typeset scores.
 
 ### training
 
